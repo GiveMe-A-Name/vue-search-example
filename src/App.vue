@@ -37,7 +37,9 @@ export default {
       <button @click="handleSearch">search</button>
     </div>
     <ul>
-      <li v-for="item in filterData">{{ item.title }} - {{ item.type }}</li>
+      <li v-for="item in filterData" :key="item.id">
+        {{ item.title }} - {{ item.type }}
+      </li>
     </ul>
   </div>
 </template>
